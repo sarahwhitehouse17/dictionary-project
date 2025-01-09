@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import "./Dictionary.css";
 import axios from "axios";
+import Results from "./Results";
 
-//Add in the She cODES api to handle submit.
-//Axios. get to use the API and create the function
-// With the function, console.log the response to check it's working
+//Send the props of the state to results.js
 
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
+  let [results, setResults] = useState(null);
 
   function handleResponse(response) {
     console.log(response.data);
+    setResults(response.data);
   }
 
   function handleSubmit(event) {
@@ -26,8 +27,11 @@ export default function Dictionary() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="search" onChange={handleKeyword}></input>
-    </form>
+    <div className="Dictionary">
+      <form onSubmit={handleSubmit}>
+        <input type="search" onChange={handleKeyword}></input>
+      </form>
+      <Results results={results} keyword={keyword} />
+    </div>
   );
 }
