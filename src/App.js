@@ -1,20 +1,25 @@
 import "./App.css";
-import Dictionary from "./Dictionary"
+import Dictionary from "./Dictionary";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <header className="App-header">
-          <a href="./" className="btn btn-primary text-center">
-            Hello
-          </a>
-        </header>
+        <header className="App-header"></header>
         <main>
           <Dictionary />
         </main>
         <footer className="text-center App-footer">
-          <small>This was coded by Sarah Whitehouse</small>
+          <small>
+            This was coded by Sarah Whitehouse and is open-sourced on{" "}
+            <a
+              href="https://github.com/sarahwhitehouse17/dictionary-project"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
+          </small>
         </footer>
       </div>
     </div>
