@@ -2,30 +2,44 @@ import React, { useState } from "react";
 import "./Dictionary.css";
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
 
-//Have a default load page steps
-// 1 - change search to handleSubmit. then from within hS, add Search()
-//2 - Search function will then do the axios call
-// 3 - Create let - loaded, set loaded (false)
-// 4 - Create if statement for return
-// 5 - For else clause, create load()
-//6 - Within load(), create setLoaded()
-// 7 - pass a keyword from App.js, and send it as the default variable for keyword.
+//Add photos to bottom of page
+//1 - Get API - 563492ad6f91700001000001fdd29f0808df42bd90c33f42e128fa89
+//2 - Set up API with the link
+
+//3deb07c475cdt015b4f399a253e4o0b8
+//https://api.shecodes.io/images/v1/search?query={query}&key={key}
+
+//3 - Do a second axios call using the photos api.
+//4 - Console.log to check working and pulls in correct keyword
+//5 - Create a new use for the photos
+//6 - Display the photos as a new component.
 
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
+  let [photos, setPhotos] = useState(null);
 
   function handleResponse(response) {
     console.log(response.data);
     setResults(response.data);
   }
 
+  function handlePhotosResponse(response) {
+    console.log(response.data);
+    setPhotos(response.data.photos);
+  }
+
   function search() {
     //Api resource - https://api.shecodes.io/dictionary
     let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=3deb07c475cdt015b4f399a253e4o0b8`;
     axios.get(apiUrl).then(handleResponse);
+
+    let apiKey = "3deb07c475cdt015b4f399a253e4o0b8";
+    let apiPhotosUrl = `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${apiKey}`;
+    axios.get(apiPhotosUrl).then(handlePhotosResponse);
   }
 
   function handleSubmit(event) {
@@ -60,6 +74,7 @@ export default function Dictionary(props) {
         </section>
         <section>
           <Results results={results} keyword={keyword} />
+          <Photos photos={photos} />
         </section>
       </div>
     );
