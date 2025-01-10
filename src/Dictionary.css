@@ -5,11 +5,16 @@
 
 .Dictionary section {
   border-radius: 6px;
-  border: 1px solid black;
   padding: 30px;
   margin: 20px 0;
   background-color: white;
   box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
+  max-width: 800px;
+}
+
+.Dictionary h1 {
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .Dictionary input {

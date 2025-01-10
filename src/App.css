@@ -4,4 +4,11 @@
 
 body {
   background-color: #a2a8d3;
+  margin: 0 auto;
+}
+
+.App .container {
+  margin: 0 auto;
+  display: block;
+  width: 800px;
 }
