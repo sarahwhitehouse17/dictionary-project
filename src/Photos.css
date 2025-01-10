@@ -17,3 +17,8 @@
   height: auto;
   display: block;
 }
+
+.Photos img:hover {
+  width: 105%;
+  margin: 0;
+}
