@@ -1,5 +1,6 @@
 import "./App.css";
 import Dictionary from "./Dictionary";
+import "./App.css";
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <div className="container">
         <header className="App-header"></header>
         <main>
-          <Dictionary />
+          <Dictionary defaultKeyword="sunset" />
         </main>
         <footer className="text-center App-footer">
           <small>
