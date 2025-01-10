@@ -9,11 +9,11 @@
   margin: 20px 0;
   background-color: white;
   box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .Dictionary h1 {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
 }
 

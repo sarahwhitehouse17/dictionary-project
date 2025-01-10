@@ -69,7 +69,7 @@ export default function Dictionary(props) {
             ></input>
           </form>
           <div className="hint">
-            Suggestions: sunrise, sunset, forrest, countryside
+            Suggestions: sunrise, sunset, forest, ocean, water
           </div>
         </section>
         <section>
