@@ -18,6 +18,7 @@ export default function Photos(props) {
               <img
                 src={photo.src.landscape}
                 key={index}
+                alt="api-image"
                 width={175}
                 className="photos"
               ></img>
