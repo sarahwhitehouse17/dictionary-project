@@ -13,6 +13,10 @@ body {
   width: 1000px;
 }
 
+.App footer small {
+  font-size: 18px;
+}
+
 @media (max-width: 900px) {
   .App .container {
     margin: 0px auto;
@@ -26,5 +30,7 @@ body {
   }
   .App footer {
     padding-bottom: 80px;
+    font-size: 14px;
   }
+
 }
