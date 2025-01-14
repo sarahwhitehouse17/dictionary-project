@@ -9,20 +9,23 @@ export default function Photos(props) {
       <div className="Photos">
         {props.photos.map(function (photo, index) {
           console.log(photo.src.landscape);
+
           return (
-            <a
-              href={photo.src.landscape}
-              target="blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={photo.src.landscape}
-                key={index}
-                alt="api-image"
-                width={175}
-                className="photos"
-              ></img>
-            </a>
+            <div className="photo-collage">
+              <a
+                href={photo.src.landscape}
+                target="blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={photo.src.landscape}
+                  key={index}
+                  alt="api-image"
+                  width={175}
+                  className="photos"
+                ></img>
+              </a>
+            </div>
           );
         })}
       </div>

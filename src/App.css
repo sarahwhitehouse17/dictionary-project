@@ -12,3 +12,18 @@ body {
   display: block;
   width: 1000px;
 }
+
+@media (max-width: 900px) {
+  .App .container {
+    margin: 0px;
+    width: 400px;
+  }
+  .Photos a img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+  .App footer {
+    padding-bottom: 80px;
+  }
+}
