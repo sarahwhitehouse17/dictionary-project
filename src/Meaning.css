@@ -1,3 +1,23 @@
 .Meaning .definition {
   font-style: italic;
+  font-size: 28px;
+}
+
+.Meaning .meaning-heading {
+  font-size: 30px;
+}
+
+@media (max-width: 900px) {
+  .Meaning .meaning-heading {
+    font-size: 22px;
+  }
+  .Meaning .definition {
+    font-size: 18px;
+  }
+  .Meaning strong {
+    font-size: 18px;
+  }
+  .Meaning li {
+    font-size: 18px;
+  }
 }

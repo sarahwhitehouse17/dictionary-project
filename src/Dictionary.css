@@ -13,7 +13,7 @@
 }
 
 .Dictionary h1 {
-  font-size: 28px;
+  font-size: 34px;
   font-weight: bold;
 }
 
@@ -26,5 +26,5 @@
 }
 
 .Dictionary .hint {
-  font-size: 12px;
+  font-size: 18px;
 }

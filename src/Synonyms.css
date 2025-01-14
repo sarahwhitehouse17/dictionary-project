@@ -6,6 +6,11 @@
   font-weight: bold;
   margin: 0px;
   padding: 0px;
+  font-size: 20px;
+}
+
+.Synonyms strong {
+  font-size: 20px;
 }
 
 .Synonyms {
@@ -17,5 +22,5 @@
   margin-right: 1px;
   padding-right: 3px;
   display: inline-block;
-  color: #7c85b7;
+  color: #9fabee;
 }

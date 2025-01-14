@@ -15,8 +15,9 @@ body {
 
 @media (max-width: 900px) {
   .App .container {
-    margin: 0px;
+    margin: 0px auto;
     width: 400px;
+    display: block;
   }
   .Photos a img {
     display: grid;
